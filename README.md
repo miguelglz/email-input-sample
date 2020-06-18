@@ -21,3 +21,5 @@ In order to have a production quality component it would need to be done from sc
 - Make the *"profile_picture"* field optional.
 - Add an image placeholder for when the user doesn't has one.
 - Handle the on focus and leave events.
+- Lint with [standardJS](https://standardjs.com/)
+- Add unit tests
