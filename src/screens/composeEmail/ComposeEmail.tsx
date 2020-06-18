@@ -5,13 +5,13 @@ import SearchInput from './searchInput'
 
 const ComposeEmail: SFC = () => (
   <Modal
-    visible
-    closable={false}
     cancelButtonProps={{ style: Style.cancelButton }}
+    closable={false}
     okButtonProps={{ style: Style.sendButton }}
     okText='Send'
+    visible
   >
-    <SearchInput placeholder='Recipients' focusedPlaceholder='To' />
+    <SearchInput focusedPlaceholder='To' placeholder='Recipients' />
   </Modal>
 );
 

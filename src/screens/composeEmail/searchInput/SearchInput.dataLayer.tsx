@@ -34,9 +34,9 @@ const SearchInputDataLayer: FC<InitialProps> = ({
     setOptionsArray(optionsArray)
   }, mockResponse);
 
-  const handleSelect = (selectedValue: string) => setSelectedEmails([...selectedEmails, selectedValue])
-  const handleOnFocus = () => setCurrentPlaceholder(focusedPlaceholder || '')
   const handleOnBlur = () => setCurrentPlaceholder(placeholder || '')
+  const handleOnFocus = () => setCurrentPlaceholder(focusedPlaceholder || '')
+  const handleSelect = (selectedValue: string) => setSelectedEmails([...selectedEmails, selectedValue])
 
   return (
     <SearchInput
