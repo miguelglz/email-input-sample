@@ -4,9 +4,14 @@ import React, {
   useState,
   useEffect
 } from 'react'
-import { SearchInput, InitialProps } from './SearchInput'
+import { SearchInput } from './SearchInput'
 import { generateOptionsArray } from './SearchInput.utils'
 import mockResponse from 'config/mockApiData.json'
+
+export interface InitialProps {
+  focusedPlaceholder?: string
+  placeholder?: string
+}
 
 interface EmailContact {
   id: number
@@ -14,9 +19,13 @@ interface EmailContact {
   last_name: string
 }
 
-const SearchInputDataLayer: FC<InitialProps> = props => {
+const SearchInputDataLayer: FC<InitialProps> = ({
+  focusedPlaceholder,
+  placeholder
+}) => {
   const [optionsArray, setOptionsArray] = useState<ReactElement[]>([]);
   const [selectedEmails, setSelectedEmails] = useState<Array<string>>([]);
+  const [currentPlaceholder, setCurrentPlaceholder] = useState<string>(placeholder || '');
 
   useEffect(() => {
     const userEmailList: EmailContact[] = mockResponse.map(c => ({...c})) // this simulates the process of doing an API request
@@ -26,8 +35,18 @@ const SearchInputDataLayer: FC<InitialProps> = props => {
   }, mockResponse);
 
   const handleSelect = (selectedValue: string) => setSelectedEmails([...selectedEmails, selectedValue])
+  const handleOnFocus = () => setCurrentPlaceholder(focusedPlaceholder || '')
+  const handleOnBlur = () => setCurrentPlaceholder(placeholder || '')
 
-  return <SearchInput {...props} selectOptions={optionsArray} handleSelect={handleSelect} />
+  return (
+    <SearchInput
+      handleOnBlur={handleOnBlur}
+      handleOnFocus={handleOnFocus}
+      handleSelect={handleSelect}
+      placeholder={currentPlaceholder}
+      selectOptions={optionsArray}
+    />
+  )
 }
 
 export default SearchInputDataLayer

@@ -7,5 +7,8 @@ export default {
     background: 'linear-gradient(0deg, #3996E0, #3996E0)',
     fontSize: 14,
     fontWeight: 700
+  },
+  selectContainer: {
+    width: '100%'
   }
 }

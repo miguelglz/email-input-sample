@@ -11,7 +11,7 @@ const ComposeEmail: SFC = () => (
     okButtonProps={{ style: Style.sendButton }}
     okText='Send'
   >
-    <SearchInput placeholder='Recipients' />
+    <SearchInput placeholder='Recipients' focusedPlaceholder='To' />
   </Modal>
 );
 

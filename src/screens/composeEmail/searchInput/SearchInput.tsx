@@ -6,21 +6,31 @@ import React, {
 import { Select } from 'antd';
 import Style from './SearchInput.style'
 
-export interface InitialProps { placeholder?: string }
-
-interface SearchInputProps extends InitialProps {
+interface SearchInputProps {
+  handleOnBlur?: () => void
+  handleOnFocus?: () => void
   handleSelect: (selectedValue: any) => void
+  placeholder?: string
   selectOptions: Array<ReactElement>
 }
 
-const SearchInput: FC<SearchInputProps> = ({ placeholder, selectOptions, handleSelect }) => (
+const SearchInput: FC<SearchInputProps> = ({
+  handleOnBlur,
+  handleOnFocus,
+  handleSelect,
+  placeholder,
+  selectOptions
+}) => (
   <Select
+    bordered={false}
     mode="tags"
-    style={{ width: '100%' }}
-    placeholder={placeholder}
-    optionLabelProp="label"
-    optionFilterProp="search"
+    onFocus={handleOnFocus}
     onSelect={handleSelect}
+    optionFilterProp="search"
+    optionLabelProp="label"
+    onBlur={handleOnBlur}
+    placeholder={placeholder}
+    style={Style.selectContainer}
   >
     {selectOptions}
   </Select>
