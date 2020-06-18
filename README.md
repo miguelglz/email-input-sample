@@ -1,7 +1,7 @@
 # React Email Field Code Dample ⚛️ 🐜 ✉️
 This a code sample to illustrate the use of **React** with **TypeScript** and **Ant Design***. it is a simple email "To:" input with autocomplete and tags functionality.
 
-To create this custom input the *Ant Design* **<Select />** component was levareged by combining *TypeScript* and *SFC React* components to it.
+To create this custom input the *Ant Design* [Select component](https://ant.design/components/select/) was levareged by combining *TypeScript* and *SFC React* components to it.
 
 The idea is to grab a **JSON** (mocked response right now) that has a list of information from a user's contact list to create an autocomplete component.
 
