@@ -19,6 +19,7 @@ In order to have a production quality component it would need to be done from sc
 - Create a function to debounce the data fetching.
 - Add a loading indicator for when the data is being fetch.
 - Make the *"profile_picture"* field optional.
+- Handle non-square and smaller than 50px images. Probably center them and fill the container.
 - Add an image placeholder for when the user doesn't has one.
 - Handle the on focus and leave events.
 - Lint with [standardJS](https://standardjs.com/)
