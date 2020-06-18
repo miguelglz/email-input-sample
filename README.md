@@ -14,6 +14,8 @@ In order to have a production quality component it would need to be done from sc
 - Add a close button to the modal.
 - Save draft emails (only recipients right now) in local storage.
 - If the email to be added is not in the autocomplete list, then validate if the string has a valid email format.
+- Handle placeholder style with [Radium](https://github.com/FormidableLabs/radium/tree/master/docs/api#style-component) to push it farther to the left than the typing indicator.
+- Calculate input left padding depending on the *onFocus* placeholder
 - Create a function to debounce the data fetching.
 - Add a loading indicator for when the data is being fetch.
 - Make the *"profile_picture"* field optional.
