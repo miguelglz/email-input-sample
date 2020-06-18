@@ -1,7 +1,7 @@
 # React Email Field Code Sample ⚛️ 🐜 ✉️
 This is a code sample to illustrate the use of **React** with **TypeScript** and **Ant Design**. it is a simple email *"To:"* input with autocomplete and tags functionality.
 
-
+![alt text](https://i.imgur.com/7vCrcXb.png)
 
 To create this custom input the *Ant Design* [Select component](https://ant.design/components/select/) was levareged by combining *TypeScript* and *SFC React* components to it.
 
@@ -18,3 +18,4 @@ In order to have a production quality component it would need to be done from sc
 - Add a loading indicator for when the data is being fetch.
 - Make the *"profile_picture"* field optional.
 - Add an image placeholder for when the user doesn't has one.
+- Handle the on focus and leave events.
