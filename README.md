@@ -1,5 +1,5 @@
 # React Email Field Code Dample ⚛️ 🐜 ✉️
-This is a code sample to illustrate the use of **React** with **TypeScript** and **Ant Design***. it is a simple email *"To:"* input with autocomplete and tags functionality.
+This is a code sample to illustrate the use of **React** with **TypeScript** and **Ant Design**. it is a simple email *"To:"* input with autocomplete and tags functionality.
 
 To create this custom input the *Ant Design* [Select component](https://ant.design/components/select/) was levareged by combining *TypeScript* and *SFC React* components to it.
 
@@ -7,7 +7,7 @@ The idea is to grab a **JSON** (mocked response right now) that has a list of in
 
 In order to have a production quality component it would need to be done from scratch by using more basic *Ant Design* components, like a basic [Input component](https://ant.design/components/input/) or maybe levarage the [Autocomplete component](https://ant.design/components/auto-complete/). This to have full control over the functionality of the component.
 
-## Improvements for this POC -
+## Improvements for this POC :shipit:
 - Create a *"theme"* file that can be applied to *Ant Design*. See https://ant.design/docs/react/customize-theme
 - Add a close button to the modal.
 - Save draft emails (only recipients right now) in local storage.
